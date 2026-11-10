@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room 402 — 12월 공연 안내</title>
+<style>
+  :root {
+    --bg: #0f0e13;
+    --panel: #1a1823;
+    --accent: #e8b84b;
+    --text: #f2efe9;
+    --muted: #a09aae;
+    --line: #2c2a38;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", "Noto Sans KR", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    text-align: center;
+    padding: 72px 20px 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  header .venue {
+    font-size: 0.9rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  header p.sub {
+    margin-top: 12px;
+    color: var(--muted);
+  }
+
+  section { padding: 48px 0; }
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .shows { display: flex; flex-direction: column; gap: 16px; }
+  .show {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+  .show .info { flex: 1 1 300px; }
+  .show .name { font-size: 1.25rem; font-weight: 700; }
+  .show .meta {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .show .meta .genre {
+    display: inline-block;
+    background: var(--line);
+    color: var(--text);
+    border-radius: 20px;
+    padding: 2px 12px;
+    font-size: 0.82rem;
+    margin-left: 4px;
+  }
+  .show .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 90px;
+  }
+  .show .price.free { color: #7fd1a0; }
+  .book-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #1a1510;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: transform 0.12s ease, opacity 0.12s ease;
+  }
+  .book-btn:hover { transform: translateY(-2px); opacity: 0.92; }
+
+  .notes, .venue-info {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .notes ul { list-style: none; }
+  .notes li { padding: 6px 0 6px 24px; position: relative; color: var(--muted); }
+  .notes li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 6px;
+  }
+  .venue-info dl { display: grid; grid-template-columns: 90px 1fr; gap: 10px 16px; }
+  .venue-info dt { color: var(--accent); font-weight: 700; }
+  .venue-info dd { color: var(--text); }
+  .venue-info a { color: var(--text); }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px 60px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 480px) {
+    header h1 { font-size: 2rem; }
+    .show { flex-direction: column; align-items: flex-start; }
+    .show .price { min-width: 0; }
+    .book-btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="venue">Room 402 · 마포</div>
+  <h1>12월 공연 안내</h1>
+  <p class="sub">작은 라이브 공연장에서 만나는 12월의 여섯 밤</p>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2 class="section-title">공연 일정</h2>
+    <div class="shows">
+
+      <div class="show">
+        <div class="info">
+          <div class="name">늦은 파도</div>
+          <div class="meta">12월 5일(토) 20:00 <span class="genre">인디 록</span></div>
+        </div>
+        <div class="price">25,000원</div>
+        <a class="book-btn" href="https://example.com/book/1">예매하기</a>
+      </div>
+
+      <div class="show">
+        <div class="info">
+          <div class="name">김예린 트리오</div>
+          <div class="meta">12월 11일(금) 19:30 <span class="genre">재즈</span></div>
+        </div>
+        <div class="price">30,000원</div>
+        <a class="book-btn" href="https://example.com/book/2">예매하기</a>
+      </div>
+
+      <div class="show">
+        <div class="info">
+          <div class="name">정적의 꽃</div>
+          <div class="meta">12월 12일(토) 20:00 <span class="genre">일렉트로닉</span></div>
+        </div>
+        <div class="price">20,000원</div>
+        <a class="book-btn" href="https://example.com/book/3">예매하기</a>
+      </div>
+
+      <div class="show">
+        <div class="info">
+          <div class="name">오픈 마이크의 밤</div>
+          <div class="meta">12월 16일(수) 19:00 <span class="genre">여러 장르</span></div>
+        </div>
+        <div class="price free">무료</div>
+        <a class="book-btn" href="https://example.com/book/4">예매하기</a>
+      </div>
+
+      <div class="show">
+        <div class="info">
+          <div class="name">종이등</div>
+          <div class="meta">12월 19일(토) 20:00 <span class="genre">포크</span></div>
+        </div>
+        <div class="price">22,000원</div>
+        <a class="book-btn" href="https://example.com/book/5">예매하기</a>
+      </div>
+
+      <div class="show">
+        <div class="info">
+          <div class="name">하늘과 표류</div>
+          <div class="meta">12월 26일(토) 18:00 <span class="genre">팝</span></div>
+        </div>
+        <div class="price">28,000원</div>
+        <a class="book-btn" href="https://example.com/book/6">예매하기</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">예매 안내</h2>
+    <div class="notes">
+      <ul>
+        <li>모든 공연은 전석 자유석입니다.</li>
+        <li>예매 취소는 공연 전날 18:00까지 가능합니다.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">공연장 안내</h2>
+    <div class="venue-info">
+      <dl>
+        <dt>이름</dt>
+        <dd>Room 402</dd>
+        <dt>주소</dt>
+        <dd>서울 마포구 와우산로29길 12, 402호</dd>
+        <dt>문의</dt>
+        <dd><a href="mailto:hello@room402.kr">hello@room402.kr</a></dd>
+      </dl>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Room 402 · 서울 마포구 와우산로29길 12, 402호 · hello@room402.kr
+</footer>
+</body>
+</html>
